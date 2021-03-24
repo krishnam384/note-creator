@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Login Comonent Snapshot of Login Component 1`] = `
+<div
+  className="login-content"
+>
+  <Modal
+    footer={
+      <button
+        onClick={[Function]}
+      >
+        close
+      </button>
+    }
+    header="Welcome to Modal"
+    onCancel={[Function]}
+    show={false}
+  >
+    <p>
+      Hello World
+    </p>
+  </Modal>
+  <button
+    onClick={[Function]}
+  >
+    Modal
+  </button>
+  <Form
+    inline={false}
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      controlId="formBasicEmail"
+    >
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        Email address
+      </FormLabel>
+      <FormControl
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Enter email"
+        style={
+          Object {
+            "width": "300px",
+          }
+        }
+        type="email"
+        value=""
+      />
+       
+    </FormGroup>
+    <FormGroup
+      controlId="formBasicPassword"
+    >
+      <FormLabel
+        column={false}
+        srOnly={false}
+      >
+        Password
+      </FormLabel>
+      <FormControl
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+    </FormGroup>
+    <FormGroup
+      controlId="formBasicCheckbox"
+    >
+      <FormCheck
+        label="Check me out"
+        type="checkbox"
+      />
+    </FormGroup>
+    <Button
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Submit
+    </Button>
+    <p>
+      Didn't create an account?
+    </p>
+    <Link
+      to="/signup"
+    >
+      Signup
+    </Link>
+  </Form>
+</div>
+`;
