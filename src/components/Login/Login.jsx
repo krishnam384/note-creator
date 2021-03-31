@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 // import axios from "axios";
 // import { handleError } from "../../reducer/action";
 import { emailValidation, passwordValidation } from "../../utils/validators";
-import Modal from "../../utils/Modal/Modal";
 import Error from "../ErrorPages/Error";
 import "./Login.css";
 
@@ -68,13 +67,10 @@ export default function Login() {
 
   const [user, setUser] = useState({ email: "", password: "" });
   const [isError, setIsError] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formValidationErrors, setFormValidationErrors] = useState({
     emailError: "",
     passwordError: "",
   });
-
-  const handleModal = () => setIsModalOpen(true);
 
   let loginFormValidationState = false;
   let FormErrors = { emailError: "", passwordError: "" };
@@ -114,15 +110,6 @@ export default function Login() {
 
   return (
     <div className='login-content'>
-      <Modal
-        show={isModalOpen}
-        header='Welcome to Modal'
-        onCancel={() => setIsModalOpen(false)}
-        footer={<button onClick={() => setIsModalOpen(false)}>close</button>}
-      >
-        <p>Hello World</p>
-      </Modal>
-      <button onClick={handleModal}>Modal</button>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId='formBasicEmail'>
           <Form.Label>Email address</Form.Label>
@@ -130,7 +117,6 @@ export default function Login() {
             type='email'
             ref={emailFocus}
             name='email'
-            id='email'
             value={user.email}
             placeholder='Enter email'
             onChange={handleChange}
@@ -144,6 +130,7 @@ export default function Login() {
           <Form.Control
             type='password'
             name='password'
+            value={user.password}
             placeholder='Password'
             onChange={handleChange}
           />

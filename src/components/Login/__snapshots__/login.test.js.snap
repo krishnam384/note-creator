@@ -4,27 +4,6 @@ exports[`Testing Login Comonent Snapshot of Login Component 1`] = `
 <div
   className="login-content"
 >
-  <Modal
-    footer={
-      <button
-        onClick={[Function]}
-      >
-        close
-      </button>
-    }
-    header="Welcome to Modal"
-    onCancel={[Function]}
-    show={false}
-  >
-    <p>
-      Hello World
-    </p>
-  </Modal>
-  <button
-    onClick={[Function]}
-  >
-    Modal
-  </button>
   <Form
     inline={false}
     onSubmit={[Function]}
@@ -39,7 +18,6 @@ exports[`Testing Login Comonent Snapshot of Login Component 1`] = `
         Email address
       </FormLabel>
       <FormControl
-        id="email"
         name="email"
         onChange={[Function]}
         placeholder="Enter email"
@@ -67,6 +45,7 @@ exports[`Testing Login Comonent Snapshot of Login Component 1`] = `
         onChange={[Function]}
         placeholder="Password"
         type="password"
+        value=""
       />
     </FormGroup>
     <FormGroup

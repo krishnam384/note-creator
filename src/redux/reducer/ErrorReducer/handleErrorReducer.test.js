@@ -1,4 +1,4 @@
-import { handleError } from "./action";
+import { handleError } from "../../action/action";
 import { HandleErrorReducer } from "./handleErrorReducer";
 
 /* eslint no-undef: 0 */

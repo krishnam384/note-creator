@@ -1,9 +1,5 @@
 import React from "react";
-import { Notes } from "./notes/notes";
-import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
-import NetworkError from "./components/ErrorPages/NetworkError";
+import { routes } from "./routes";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -21,11 +17,9 @@ function App() {
       <ReactNotification />
       <Router>
         <Switch>
-          <Route path='/login' component={Login} />
-          <Route path='/signup' component={Signup} />
-          <Route path='/home' component={Home} />
-          <Route path='/notes' component={Notes} />
-          <Route path='/500' component={NetworkError} />
+          {routes.map((route, index) => (
+            <Route path={route.path} component={route.component} key={index} />
+          ))}
           <Redirect to='/login' />
         </Switch>
       </Router>

@@ -97,3 +97,25 @@ export const passwordValidation = (password) => {
   }
   return "";
 };
+
+export const usernameValidation = (User) => {
+  if (User.trim() === "") {
+    return "User is required";
+  }
+  if (User.length < 5) {
+    return "User Must contain atleast 5 Characters";
+  }
+  return "";
+};
+
+export const phoneNumberValidation = (phoneNumber) => {
+  console.log(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/.test(phoneNumber));
+  if (phoneNumber.trim() === "") {
+    return "Phone Number is required";
+  }
+  if (/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/.test(phoneNumber)) {
+    return "";
+  } else {
+    return "Please enter Valid Phone Number";
+  }
+};

@@ -1,4 +1,4 @@
-import { ERROR } from "./action";
+import { ERROR } from "../../action/action";
 // import { useHistory } from "react-router-dom";
 
 const initialState = {
@@ -15,7 +15,8 @@ export const HandleErrorReducer = (state = initialState, action) => {
   switch (action.type) {
     case ERROR:
       console.log("initial State");
-      action.props.history.push("/500");
+      console.log(action.props);
+      action.props.history.push("/errorPages");
       return { message: "Network Error" };
 
     default:

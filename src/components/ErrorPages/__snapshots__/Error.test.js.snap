@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Error Component Snapshot Testing of Error Component 1`] = `
+<small
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  *
+</small>
+`;

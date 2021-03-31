@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import NotesList from "./notesList";
-import { addNotes } from "../reducer/action";
+import { addNotes } from "../redux/action/action";
 
 export const Notes = () => {
   const [note, setNotes] = useState("");
